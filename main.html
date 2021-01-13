@@ -2,19 +2,128 @@
 <html>
 
 <head>
+    <style>
+        body{        
+            /*그라데이션 효과, 1번째 색이 50% 채우고 후에 2번째 색으로 효과적용*/
+            background: linear-gradient( to right, #e8a660 50%, #d68b3b);
+        }
 
+        h1 {
+            font-size:45px;
+            text-align: center;
+            border-bottom:1px solid gray;
+            margin:0;
+            padding:20px;
+            color: #374348;
+            font-family: fantasy;
+        }
+
+        #navbar{
+            border-right:1px solid gray;
+            width:100px;
+            margin:0;
+            padding:20px;
+        }
+
+        #grid{
+            display: grid;
+            grid-template-columns: 150px 1fr;
+        }
+
+        audio{
+            padding:20px;
+            width: 75%;
+        }
+        
+        .playlist{
+            padding: 10px;
+            
+            font-weight: bolder;
+
+        }
+    </style>
+    
 </head>
-
-<body>
-    <input type="button" id="hw" value="Hello world" />
-    <script type="text/javascript">
-
-    </script>
-            <img src="src/image/potato.jpg" width="100px" height="100px">
-    <audio controls>
-        <source src="src/audio/202101_potato.mp3" type="audio/mp3">
-        이 문장은 사용자의 웹 브라우저가 audio 요소를 지원하지 않을 때 나타납니다!
-    </audio>
+<body>    
+        <!-- <img src="src/image/potato.jpg" width="100px" height="100px"> -->
+        <h1>Holic DJ</h1>
+        <div id="grid">
+            <ol id="navbar">
+                <li><a href="" class="saw">감자의 플레이리스트<br>(Potato's playlist)</a></li>
+            </ol>
+            <div>
+                <audio controls id="musicPlayer">
+                    <source src="src/audio/202101_potato.mp3" type="audio/mp3">
+                    이 문장은 사용자의 웹 브라우저가 audio 요소를 지원하지 않을 때 나타납니다!
+                </audio>
+                
+                <ol>
+                    <li class="playlist" id="track1"><a>The Boilermaker Jazz Band - It's De-Lovely</a></li>
+                    <li class="playlist" id="track2"><a>Louis & Ella - Dream A Little Dream Of Me</a></li>
+                    <li class="playlist" id="track3"><a>Ella Fitzgerald - Jersey Bounce.wmv</a></li>
+                    <li class="playlist" id="track4"><a>Green Hill Instrumental - The Charleston</a></li>
+                    <li class="playlist" id="track5"><a>Chris Barber's Jazz Band - Thriller Rag</a></li>
+                    <li class="playlist" id="track6"><a>Dean Martin - You're Nobody till Somebody Loves You</a></li>
+                    <li class="playlist" id="track7"><a>Hello Dolly - Louis Armstrong</a></li>
+                    <li class="playlist" id="track8"><a>Pink Martini - Sympathique [HD]</a></li>
+                    <li class="playlist" id="track9"><a>Roberta Flack - When You Smile</a></li>
+                    <li class="playlist" id="track10"><a>Ella Fitzgerald & Louis Armstrong - comes love</a></li>
+                </ol>
+            </div>
+        </div>
+        <script type="text/javascript">
+            let audio = document.getElementById('musicPlayer');
+            let track1 = document.getElementById('track1');
+            let track2 = document.getElementById('track2');
+            let track3 = document.getElementById('track3');
+            let track4 = document.getElementById('track4');
+            let track5 = document.getElementById('track5');
+            let track6 = document.getElementById('track6');
+            let track7 = document.getElementById('track7');
+            let track8 = document.getElementById('track8');
+            let track9 = document.getElementById('track9');
+            let track10 = document.getElementById('track10');
+            track1.onclick = function(){
+                audio.currentTime = 0;
+                audio.play();
+            };
+            track2.onclick = function(){
+                audio.currentTime = 239;
+                audio.play();
+            };
+            track3.onclick = function(){
+                audio.currentTime = 421;//239+182.5
+                audio.play();
+            };
+            track4.onclick = function(){
+                audio.currentTime = 633;//421+212
+                audio.play();
+            };
+            track5.onclick = function(){
+                audio.currentTime = 783;//633+150
+                audio.play();
+            };
+            track6.onclick = function(){
+                audio.currentTime = 960;//783+177
+                audio.play();
+            };
+            track7.onclick = function(){
+                audio.currentTime = 1092;//960+132
+                audio.play();
+            };
+            track8.onclick = function(){
+                audio.currentTime = 1238;//1092+146
+                audio.play();
+            };
+            track9.onclick = function(){
+                audio.currentTime = 1404;//1238+166
+                audio.play();
+            };
+            track10.onclick = function(){
+                audio.currentTime = 1632;//1404+228
+                audio.play();
+            };
+        </script>
 </body>
 
 </html>

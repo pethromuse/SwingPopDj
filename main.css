@@ -1,0 +1,59 @@
+body{        
+    /*그라데이션 효과, 1번째 색이 50% 채우고 후에 2번째 색으로 효과적용*/
+    background: linear-gradient( to right, #e8a660 50%, #d68b3b);
+}
+header {
+    padding-left: 33%;
+}
+
+h1 {
+    font-size: 6vw;
+    text-align: left;
+    margin-top:50px;
+    margin-bottom:0px;
+    color: #374348;
+    font-family: fantasy;
+}
+h2 {
+    font-size: 3vw;
+    text-align: left;
+    margin:0;
+    padding: 0px 20px 20px 5px;
+    color: #374348;
+    font-family: fantasy;
+}
+h3 {
+    margin: 0px;
+    border-bottom:1px solid gray;
+}
+li {
+    font-size: 2vw;
+}
+
+#navbar{
+    border-right:1px solid gray;
+    width:100px;
+    margin:0;
+    padding:20px;
+}
+
+#grid{
+    display: grid;
+    grid-template-columns: 150px 1fr;
+}
+
+audio{
+    padding:20px;
+    width: 75%;
+}
+
+.playlist{
+    padding: 10px;
+    
+    font-weight: bolder;
+
+}
+footer {
+    border-top: 1px solid gray;
+    padding: 20px;
+}

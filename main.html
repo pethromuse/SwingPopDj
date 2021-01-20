@@ -2,51 +2,15 @@
 <html>
 
 <head>
-    <style>
-        body{        
-            /*그라데이션 효과, 1번째 색이 50% 채우고 후에 2번째 색으로 효과적용*/
-            background: linear-gradient( to right, #e8a660 50%, #d68b3b);
-        }
-
-        h1 {
-            font-size:45px;
-            text-align: center;
-            border-bottom:1px solid gray;
-            margin:0;
-            padding:20px;
-            color: #374348;
-            font-family: fantasy;
-        }
-
-        #navbar{
-            border-right:1px solid gray;
-            width:100px;
-            margin:0;
-            padding:20px;
-        }
-
-        #grid{
-            display: grid;
-            grid-template-columns: 150px 1fr;
-        }
-
-        audio{
-            padding:20px;
-            width: 75%;
-        }
-        
-        .playlist{
-            padding: 10px;
-            
-            font-weight: bolder;
-
-        }
-    </style>
-    
+    <link rel="stylesheet" type="text/css" href="main.css"/>
 </head>
 <body>    
         <!-- <img src="src/image/potato.jpg" width="100px" height="100px"> -->
-        <h1>Holic DJ</h1>
+        <header>
+        <h1>SwingPop DJ </h1>
+        <h2>Broadcast Station</h2>
+        </header>
+        <h3></h3>
         <div id="grid">
             <ol id="navbar">
                 <li><a href="" class="saw">감자의 플레이리스트<br>(Potato's playlist)</a></li>
@@ -71,59 +35,11 @@
                 </ol>
             </div>
         </div>
-        <script type="text/javascript">
-            let audio = document.getElementById('musicPlayer');
-            let track1 = document.getElementById('track1');
-            let track2 = document.getElementById('track2');
-            let track3 = document.getElementById('track3');
-            let track4 = document.getElementById('track4');
-            let track5 = document.getElementById('track5');
-            let track6 = document.getElementById('track6');
-            let track7 = document.getElementById('track7');
-            let track8 = document.getElementById('track8');
-            let track9 = document.getElementById('track9');
-            let track10 = document.getElementById('track10');
-            track1.onclick = function(){
-                audio.currentTime = 0;
-                audio.play();
-            };
-            track2.onclick = function(){
-                audio.currentTime = 239;
-                audio.play();
-            };
-            track3.onclick = function(){
-                audio.currentTime = 421;//239+182.5
-                audio.play();
-            };
-            track4.onclick = function(){
-                audio.currentTime = 633;//421+212
-                audio.play();
-            };
-            track5.onclick = function(){
-                audio.currentTime = 783;//633+150
-                audio.play();
-            };
-            track6.onclick = function(){
-                audio.currentTime = 960;//783+177
-                audio.play();
-            };
-            track7.onclick = function(){
-                audio.currentTime = 1092;//960+132
-                audio.play();
-            };
-            track8.onclick = function(){
-                audio.currentTime = 1238;//1092+146
-                audio.play();
-            };
-            track9.onclick = function(){
-                audio.currentTime = 1404;//1238+166
-                audio.play();
-            };
-            track10.onclick = function(){
-                audio.currentTime = 1632;//1404+228
-                audio.play();
-            };
-        </script>
+        <footer>
+            <ul>
+            </ul>
+        </footer>
+        <script type="text/javascript" src="main.js"></script>
 </body>
 
 </html>
